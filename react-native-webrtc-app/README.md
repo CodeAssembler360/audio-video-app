@@ -2,15 +2,6 @@
 
 <img src="./public/compressed-react-native-webrtc.jpeg" />
 
----
-## Run the Sample App
-
-Clone the repository to your local environment.
-
-```js
-git clone https://github.com/videosdk-live/webrtc.git
-```
-
 ### Server Setup
 
 #### Step 1: Go to server folder
