@@ -39,7 +39,7 @@ export default function App({}) {
   );
   const otherUserId = useRef(null);
 
-  const socket = SocketIOClient('http://192.168.0.111:3500', {
+  const socket = SocketIOClient('http://192.168.2.201:3500', {
     transports: ['websocket'],
     query: {
       callerId,
@@ -65,7 +65,6 @@ export default function App({}) {
       ],
     }),
   );
-  console.log({peerConnection});
 
   let remoteRTCMessage = useRef(null);
 
@@ -142,7 +141,6 @@ export default function App({}) {
         })
         .catch(error => {
           // Log error
-          console.log({error});
         });
     });
 
@@ -268,7 +266,7 @@ export default function App({}) {
                 justifyContent: 'center',
                 borderRadius: 14,
               }}>
-              {/* <Text
+              <Text
                 style={{
                   fontSize: 18,
                   color: '#D0D4DD',
@@ -283,7 +281,7 @@ export default function App({}) {
                   console.log('TEST', otherUserId.current);
                 }}
                 keyboardType={'number-pad'}
-              /> */}
+              />
               <TouchableOpacity
                 onPress={() => {
                   setType('OUTGOING_CALL');
